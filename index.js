@@ -1,8 +1,12 @@
+// Application Requirements //
 const fs = require("fs");
 const inquirer = require('inquirer');
 const Manager = require( "./lib/manager");
 const Engineer = require( "./lib/engineer");
 const Intern = require( "./lib/intern");
+
+// Command line application that accepts user input //
+// Prompt for Team Member and their information //
 
 inquirer.prompt([
     {
@@ -27,3 +31,6 @@ inquirer.prompt([
     }    
     
 ]);
+// Generate HTML that displays team roster based on user input //
+// Links to email address open default mail application //
+// Link for Github opens in new tab //
