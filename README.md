@@ -30,6 +30,9 @@ UNC Chapel Hill
 ## Testing
 Once the proper NPM are installed you may run the test for the project by typing 'npm run test’ into the interagted terminal. Once testing is complete you may run 'node index.js' to begin adding new employees to your team.
 
+# Screenshots
+<img src="assets/My Team.png">
+
 # Video
 <img src="assets/Team Prolile.gif">
 
