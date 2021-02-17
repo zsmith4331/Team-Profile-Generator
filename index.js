@@ -115,8 +115,8 @@ function buildHtml() {
         <script src="https://kit.fontawesome.com/2f0e2cb727.js" crossorigin="anonymous"></script>
         <style>
             .card{
-                max-width: 300px;
-                min-width: 300px; 
+                max-width: 325px;
+                min-width: 325px; 
             }
         </style>
         <title>My Team</title>
