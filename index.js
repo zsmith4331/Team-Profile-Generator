@@ -12,7 +12,7 @@ function buildTeam() {
 };
 
 function addEmployee() {
-// Prompt for Team Member and their information //    
+// Prompt for adding new employee and their information //    
 inquirer.prompt([
     {
         type: "list",
@@ -89,8 +89,7 @@ inquirer.prompt([
             break;
         }
         employees.push(newEmployee);
-        content(newEmployee)
-        .then(function() {
+        content(newEmployee).then(function() {
             if (moreEmployees === "Yes") {
                 addEmployee();
             } else {
@@ -107,28 +106,29 @@ function buildHtml() {
     const html = `
     <!DOCTYPE html>
         <html lang="en">
-            <head>
-                <meta charset="UTF-8">
-                <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <meta http-equiv="X-UA-Compatible" content="ie=edge">
-                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-                <script src="https://kit.fontawesome.com/2f0e2cb727.js" crossorigin="anonymous"></script>
-                <style>
-                    .card{
-                        max-width: 300px;
-                        min-width: 300px; 
-                    }
-                </style>
-                <title>My Team</title>
-            </head>
-                <body>
 
-                    <header class="container-fluid bg-danger text-white text-center p-4">
-                        <h1>My Team</h1>
-                    </header>   
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+        <script src="https://kit.fontawesome.com/2f0e2cb727.js" crossorigin="anonymous"></script>
+        <style>
+            .card{
+                max-width: 300px;
+                min-width: 300px; 
+            }
+        </style>
+        <title>My Team</title>
+    </head>
 
-                    <div class="container">
-                        <div class="row">`;
+    <body>
+        <header class="container-fluid bg-danger text-white text-center p-4">
+            <h1>My Team</h1>
+        </header>   
+
+        <div class="container">
+            <div class="row">`;
     fs.writeFile("./output/index.html", html, function(err) {
         if (err) {
             console.log(err);
@@ -217,7 +217,7 @@ function htmlDone() {
             console.log(err);
         };
     });
-    console.log("Your team is being built.");
+    console.log("Your team has been built, please check the output folder.");
 }
 
 buildTeam();
